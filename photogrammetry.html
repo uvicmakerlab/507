@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Notes: English 507 at the University of Victoria</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header"><a href="http://uvicmakerlab.github.io/507/">Engl507</a></h1>
+        <p class="header"><a href="http://www.uvic.ca/">University of Victoria</a><br><a href="http://www.jenterysayers.com/">Jentery Sayers</a><br>Spring 2014</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/uvicmakerlab/507/zipball/gh-pages">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/uvicmakerlab/507/tarball/gh-pages">Download TAR</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/uvicmakerlab/507/blob/gh-pages/syllabus.pdf?raw=true">Download PDF</a></li>
+          <li><a class="buttons github" href="https://github.com/uvicmakerlab/507">GitHub</a></li>
+        </ul>
+
+        <p class="header"><a href="description.html">Description</a><br><a href="format.html">Format</a><br><a href="stipulations.html">Stipulations</a><br><a href="objectives.html">Objectives</a><br><a href="assessment.html">Assessment</a><br><a href="policies.html">Policies</a><br><a href="http://www.hastac.org/future-higher-ed" target="_blank">#FutureEd</a></p>
+
+
+      </header>
+      <section>
+        <h3>
+<a name="description" class="anchor" href="#description"><span class="octicon octicon-link"></span></a>Photogrammetry</h3>
+
+<p>Photogrammetry is the process of making measurements and stitching together models using photographs. For the purposes of the seminar, we'll look to photogrammetry in order to better understand Manovich's <a href="http://www.manovich.net/LNM/Manovich.pdf" target="_blank">principles of new media</a> and, to some degree, Chun's <a href="notes3.html#chun">work on memory</a>.</p>
+<p>In order to build a model using images, you'll need a camera and a "reference object" you want to digitize and model. Any digital camera will work, really. It does not need to be, say, a fancy DSLR. You'll then use that camera to take multiple photographs of a single object. Those photographs will then be fed into a computer vision algorithm (e.g., <a href="http://www.123dapp.com/catch" target="_blank">123D Catch</a> or <a href="http://wedidstuff.heavyimage.com/index.php/2013/07/12/open-source-photogrammetry-workflow/" target="_blank">VisualSFM</a>), which will stich the images together.</p>
+<p>As you begin to photograph your reference object, here are a few tips:<ul>
+<li>KNOW YOUR ALGORITHM. Before you spend too much time on a particular tool, kit, or app, see how others have used it and what guidelines exist. For my work, I use either <a href="http://www.123dapp.com/catch" target="_blank">123D Catch</a> or <a href="http://wedidstuff.heavyimage.com/index.php/2013/07/12/open-source-photogrammetry-workflow/" target="_blank">VisualSFM</a>. 123D Catch is very user-friendly, but limits your choices and renders many of its own choices opaque. VisualSFM has a slight learning curve, runs in part via the command line, and affords more range / choice.</li>
+<li>Avoid reflective or transparent objects, or lightly dust them with powder.</li>
+<li>Also avoid reflective walls and floors.</li>
+<li>Avoid featureless objects.</li>
+<li>Avoid things that move and moving things (e.g., don't move your object as your photographing it).</li>
+<li>Avoid direct light. Ambient light is best, and keep the lighting uniform (where possible).</li>
+<li>Place your object on a circular stage (or the like) that you can move around as you're photographing it.</li>
+<li>Strategically arrange self-occluding objects so that you can photograph as much of them as possible.</li>
+<li>Produce reference points (using a newspaper or post-it notes).</li>
+<li>Do not use a flash.</li>
+<li>For my camera (Canon EOS Rebel T3i), I have found that an 18mm focal length is best.</li>
+<li>Whatever the focal length, keep it consistent across the photographs. </li> 
+<li>Fill your photographs with the reference object. Avoid photographing content you don't want in the model.</li>
+<li>Aim for sharp images wherever possible.</li>
+<li>Move steadily and consistently around your object.</li>
+<li>When photographing, use tight intervals for occlusions.</li>
+<li>Try taking two "loops" around your object, and photograph from at least two different angles.</li>
+<li>Take your detail shots last.</li>
+<li>For most computer vision algorithms, between 40 and 60 photographs is best, unless your object has a number of occlusions. For small objects, you might only need between 20 and 30 photographs.</li>
+</ul></p>
+<p>When working with 123D Catch, I've found this video informative:
+<iframe width="560" height="315" src="//www.youtube.com/embed/NsBg-m2hrIM?rel=0" frameborder="0" allowfullscreen></iframe>
+</p>
+<p>You might also want to check out the following:<ul>
+<li><a href="http://thingiverse.com/" target="_blank">Thingiverse</a></li>
+<li><a href="http://3d.si.edu/" target="_blank">Smithsonian X 3D</a></li>
+<li><a href="http://www.europeana.eu/portal/search.html?rows=12&qf=TYPE:3D" target="_blank">Europeana</a></li>
+<li><a href="http://kmoddl.library.cornell.edu/" target="_blank">Kinematic Models for Design</a></li>
+<li><a href="http://www.adafruit.com/" target="_blank">Adafruit</a></li>
+<li><a href="http://web.media.mit.edu/~leah/grad_work/links/machine_links.html" target="_blank">Leah Buechley's Links</a></li>
+<li>Ratto and Ree, <a href="http://firstmonday.org/ojs/index.php/fm/article/view/3968/3273" target="_blank">"Materializing Information"</a></li>
+<li><a href="http://makezine.com/volume/guide-to-3d-printing-2014/" target="_blank"><em>Make: Ultimate Guide to 3D Printing</em></a></li>
+<li><a href="http://maker.uvic.ca/category/zaxis" target="_blank">The Maker Lab's "Z-Axis" Research</a></li>
+</ul>
+
+ 
+ </section>
+      <footer>
+        
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		          <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("&lt;script&gt;   (function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,&#39;script&#39;,&#39;//www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);    ga(&#39;create&#39;, &#39;UA-46858077-1&#39;, &#39;uvicmakerlab.github.io&#39;);   ga(&#39;send&#39;, &#39;pageview&#39;);  &lt;/script&gt;");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
