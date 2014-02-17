@@ -34,23 +34,36 @@
         <h3>
 <a name="description" class="anchor" href="#description"><span class="octicon octicon-link"></span></a>MALLET</h3>
 
-<p><a href="http://mallet.cs.umass.edu/" target="_blank">MALLET</a> is a Java-based package for statistical natural language processing, document classification, clustering, topic modeling, information extraction, and other machine learning applications to text.</p>
+<p><a href="http://mallet.cs.umass.edu/" target="_blank">MALLET</a> is a Java-based package for statistical natural language processing, document classification, clustering, topic modelling, information extraction, and other machine learning applications to text.</p>
 
-<p>To get started with MALLET and Latent Dirichlet Allocation topic modeling, we're going to use <a href="https://code.google.com/p/topic-modeling-tool/" target="_blank">this tool</a>.</p>
+<p>To get started with MALLET and Latent Dirichlet Allocation topic modeling, we're going to use <a href="https://code.google.com/p/topic-modeling-tool/" target="_blank">this tool</a>. However, for extensive use, I recommend using the <a href="http://mallet.cs.umass.edu/quick-start.php" target="_blank">command line</a>.</p>
+
+<p>A few things to consider when using MALLET:<ul>
+<li>Borrowing from <a href="http://mlg.eng.cam.ac.uk/creed/Notes/lda-tutorial-reed.pdf" target="_blank">Colorado Reed</a>, "a topic is a probability distribution over a collection of words
+and a topic model is a formal statistical relationship between a group of observed and
+latent (unknown) random variables that specifies a probabilistic procedure to generate
+the topics—<em>a generative model</em>. The central goal of a topic is to provide a 'thematic
+summary' of a collection of documents. In other words, it answers the question: what
+themes are these documents discussing?" (2).</li>
+<li>MALLET relies on Latent Dirichlet Allocation (LDA), which is probably the most popular topic model across the disciplines. The model describes how documents (or bags of words) obtain their words. In so doing, it makes no assumptions about the order in which the words appear in a given document (Reed 2-3). What's more, you can create documents based on your own preferences. For instance, a document could be a paragraph in a novel, or it could be an entire novel. That said, it's important to interpret models across the topics they generate. In the case of MALLET, a cluster of words is only meaningful in relation to the other clusters that are identified. Avoid isolating specific topics as if they emerged independently from the balance.</li>  
+<li>This particular tool outputs MALLET results in both CSV (for spreadsheets) and HTML (for browsers). You should them both, as they provide different information and inform each other, through different structures/formats.</li>
+<li>When using the tool, it is important to run the algorithm several times, changing the number of preferred topics  and iterations. Also consider running it with and without stopwords (even if the results with stopwords will seem banal or obvious). This way, you can test for consistency (or interesting anomalies), and you iteratively develop the model, seeing what congeals across trials.</li>
+<li>In the humanities, topic modelling and LDA are rarely used to prove anything about texts. Instead, they are vehicles for conjecture and speculation, perhaps prompting us to think about groups of documents in ways we have not considered.</li> 
+<li>Keep Ben Schmidt's <a href="http://sappingattention.blogspot.ca/2012/11/when-you-have-mallet-everything-looks.html" target="_blank">perspective</a> in mind: "And most humanists who do what I've just done—blindly throwing data into MALLET—won't be able to give the results the pushback they deserve. . . . I don't think I'm alone: and I'm not sure that we should too enthusiastic about interpreting results from machine learning which we can only barely steer. So there are cases where topic modeling can be useful for data-creation purposes . . . But as artifacts to be interpreted on their own, topic models may be less useful." </li>
+</ul></p>
  
-<p>Some other MALLET and topic modelling resources:<ul>
+<p>Some other resources for MALLET and topic modelling:<ul>
+<li>Posner, <a href="http://miriamposner.com/blog/very-basic-strategies-for-interpreting-results-from-the-topic-modeling-tool/" target="_blank">"Very Basic Strategies for Interpreting Results from the Topic Modeling Tool"</a></li>
 <li>Graham, Weingart, and Milligan, <a href="http://programminghistorian.org/lessons/topic-modeling-and-mallet" target="_blank">"Getting Started with Topic Modeling and MALLET"</a></li>
 <li>Underwood, <a href="http://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/" target="_blank">"Topic Modeling Made Just Simple Enough"</a></li> 
 <li>Schmidt, <a href="http://sappingattention.blogspot.ca/2011/11/compare-and-contrast.html" target="_blank">"Compare and Contrast"</a></li> 
+<li>Schmidt, <a href="http://sappingattention.blogspot.ca/2012/11/when-you-have-mallet-everything-looks.html" target="_blank">"When You Have a MALLET, Everything Looks Like a Nail"</a></li>
 <li>Weingart, <a href="http://www.scottbot.net/HIAL/?p=19113" target="_blank">"Topic Modeling for Humanists: A Guided Tour"</a></li>
 <li>Templeton, <a href="http://mith.umd.edu/topic-modeling-in-the-humanities-an-overview/" target="_blank">"Topic Modeling in the Humanities: An Overview"</a></li>
 <li>Blei, <a href="http://journalofdigitalhumanities.org/2-1/topic-modeling-and-digital-humanities-by-david-m-blei/" target="_blank">"Topic Modeling and Digital Humanities"</a></li>
 <li>Nelson, <a href="http://dsl.richmond.edu/dispatch/pages/home" target="_blank">"Mining the <em>Dispatch</em>"</a></li>
 <li>Blevins, <a href="http://historying.org/2010/04/01/topic-modeling-martha-ballards-diary/" target="_blank">"Topic Modeling Martha Ballard’s Diary"</a></li>
 </ul></p>
-
-
- 
  </section>
       <footer>
         
